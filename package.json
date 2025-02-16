@@ -3,9 +3,20 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-  }
+  },
+  "name": "codespaces-express",
+  "version": "1.0.0",
+  "description": "Welcome to your shiny new Codespace running Express! We've got everything fired up and running for you to explore Express.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
