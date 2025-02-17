@@ -1,18 +1,19 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
 const app = express();
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+const PORT = process.env.PORT || 3000;
 
-// Route to serve the homepage
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'improved-church-website.html'));
+app.get("/", (req, res) => {
+  res.send("Server is running!");
 });
 
-const PORT = process.env.PORT || 3000;
+// Catch-all route for 404s
+app.use((req, res) => {
+  res.status(404).send("404: Page Not Found");
+});
+
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
 //node server.js
